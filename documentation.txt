@@ -1,3 +1,1 @@
 update next js version : npm i -g create-next-app
-
-    sharjeel ali bari
