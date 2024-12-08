@@ -1,4 +1,4 @@
-interface INavItem {
+export interface INavItem {
   label: string; 
   path: string;  
 }

@@ -1,4 +1,6 @@
 import { navItems } from '@/data/data'
+import { INavItem } from '@/interface/interfaces'
+
 import Link from 'next/link'
 
 export default function NavItems() {
