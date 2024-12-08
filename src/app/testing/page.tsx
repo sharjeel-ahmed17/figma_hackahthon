@@ -1,11 +1,11 @@
-import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const Testing = () => {
   return (
     <div>
 
-        <Button className='bg-red-800 text-blue-300' size='lg'>sharjeel alibari</Button>
+      {/* <p className='font-satoshi'>sharjeel ali bari</p>
+      <p className='font-integ'>sharjeel ali bari  </p> */}
     </div>
   )
 }

@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/header/Header";
+import TopBar from "@/components/TopBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+const satoshi = localFont({
+  src: "./fonts/Satoshi-Regular.otf",
+  variable: "--satoshi",
+  weight: "100 900",
+});
+const integ = localFont({
+  src: "./fonts/Satoshi-Regular.otf",
+  variable: "--integ",
+  weight: "100 900",
+});
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./fonts/Fontspring-DEMO-integralcf-regular.otf",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -26,9 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${integ.variable} ${satoshi.variable}  antialiased`}
       >
-        {children}
+        <div className="max-w-screen-large mx-auto bg-white">
+          <TopBar />
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

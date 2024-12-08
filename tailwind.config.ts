@@ -55,7 +55,31 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  screens: {
+
+			'small': '390px',
+			'sm': '640px',
+			// => @media (min-width: 640px) { ... }
+	  
+			'md': '768px',
+			// => @media (min-width: 768px) { ... }
+	  
+			'lg': '1024px',
+			// => @media (min-width: 1024px) { ... }
+	  
+			'xl': '1280px',
+			// => @media (min-width: 1280px) { ... }
+	  
+			'2xl': '1536px',
+			'large': '1440px',
+			
+			// => @media (min-width: 1536px) { ... }
+		  },
+		  fontFamily : {
+			satoshi : ["var(--satoshi)", "satoshi"],
+			integ : ["var(--integ)", "integ"],
+		  }
   	}
   },
   plugins: [require("tailwindcss-animate")],
