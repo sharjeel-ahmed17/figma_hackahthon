@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import TopBar from "@/components/TopBar";
+import Footer from "@/components/footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,9 +15,19 @@ const satoshi = localFont({
   variable: "--satoshi",
   weight: "100 900",
 });
+const satoshiBold = localFont({
+  src: "./fonts/Satoshi-Bold.otf",
+  variable: "--satoshi-bold",
+  weight: "100 900",
+});
 const integ = localFont({
-  src: "./fonts/Satoshi-Regular.otf",
+  src: "./fonts/Fontspring-DEMO-integralcf-regular.otf",
   variable: "--integ",
+  weight: "100 900",
+});
+const integBold = localFont({
+  src: "./fonts/Fontspring-DEMO-integralcf-boldoblique.otf",
+  variable: "--integ-bold",
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -38,12 +49,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${integ.variable} ${satoshi.variable}  antialiased`}
+        className={`${geistSans.variable} ${integBold.variable} ${satoshiBold.variable} ${geistMono.variable} ${integ.variable} ${satoshi.variable}  antialiased`}
       >
         <div className="max-w-screen-large mx-auto bg-white">
           <TopBar />
           <Header />
+
           {children}
+          <Footer/>
         </div>
       </body>
     </html>

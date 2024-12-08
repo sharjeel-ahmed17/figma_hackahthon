@@ -1,90 +1,87 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Shop', href: '/about' },
-  { name: 'On Sale', href: '/services' },
-  { name: 'New Arrival ', href: '/contact' },
-  { name: 'Brands', href: '/contact' },
-]
+import { useState } from 'react';
+import { CircleUser, Menu, Search,  ShoppingCart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { DialogTitle } from '@/components/ui/dialog';
+import Logo from './logo';
+import NavItems from './nav-items';
+import SearchModal from './search-modal';
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
-  const menuRef = React.useRef<HTMLDivElement>(null)
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  React.useEffect(() => {
-    function handleOutsideClick(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setMobileMenuOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleOutsideClick)
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick)
-    }
-  }, [])
+  const openSearch = () => setIsSearchOpen(true);
+  const closeSearch = () => setIsSearchOpen(false);
 
   return (
-    <nav className="bg-white shadow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-[32px]  font-extrabold text-gray-800">
-              SHOP.CO
-              </Link>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-[16px]  text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 max-w-[1240px] w-full mx-auto h-[41px] px-4 my-5">
+      <div className="flex h-full items-center justify-between space-x-4"> {/* Add space-x-4 for gap between sections */}
+        
+        {/* Left Section: Menu, Logo */}
+        <div className="flex items-center space-x-4"> {/* Add space-x-4 for gap between items */}
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
+              <NavItems />
+            </SheetContent>
+          </Sheet>
+
+          {/* Logo */}
+          <Logo />
+        </div>
+
+        {/* Center Section: Navigation Items and Search */}
+        <div className="flex items-center space-x-6 flex-1"> {/* Add space-x-6 for larger gap */}
+          {/* Navigation Items */}
+          <div className="hidden md:flex md:items-center md:space-x-6"> {/* Add space-x-6 for nav items */}
+            <NavItems />
           </div>
-          <div className="-mr-2 flex items-center sm:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Open main menu</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+
+          {/* Search Bar */}
+          <div className="hidden md:block relative flex-grow">
+            <Input
+              type="search"
+              placeholder="Search..."
+              className="w-full bg-gray-100 placeholder-gray-400 rounded-full pl-10 pr-4 placeholder:font-satoshi placeholder:text-[16px]"
+            />
+            <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform text-gray-400" />
           </div>
+        </div>
+
+        {/* Right Section: Icons */}
+        <div className="flex items-center space-x-4"> {/* Add space-x-4 for gap between icons */}
+          {/* Search Icon for Mobile */}
+          <Button variant="ghost" size="icon" onClick={openSearch} className="md:hidden">
+            <Search className="h-5 w-5" />
+            <span className="sr-only">Search</span>
+          </Button>
+
+          {/* Shopping Bag Icon */}
+          <Button variant="ghost" size="icon">
+            <ShoppingCart className="h-5 w-5" />
+            <span className="sr-only">Shopping bag</span>
+          </Button>
+
+          {/* User Icon */}
+          <Button variant="ghost" size="icon">
+            <CircleUser className="h-5 w-5" />
+            <span className="sr-only">User account</span>
+          </Button>
         </div>
       </div>
 
-      {mobileMenuOpen && (
-        <div ref={menuRef} className="sm:hidden">
-          <div className="pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
-  )
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
+    </header>
+  );
 }
-

@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			footercolor : '#F0F0F0',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -78,10 +79,14 @@ const config: Config = {
 		  },
 		  fontFamily : {
 			satoshi : ["var(--satoshi)", "satoshi"],
+			satoshBold : ["var(--satoshi-bold)", "satoshi-bold"],
 			integ : ["var(--integ)", "integ"],
+			integBold : ["var(--integ-bold)", "integ-bold"],
 		  }
   	}
   },
   plugins: [require("tailwindcss-animate")],
+
+  
 };
 export default config;

@@ -14,13 +14,13 @@ const TopBar = () => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-blue-500 text-white flex items-center p-3 shadow-md z-50 relative">
-      <div className="mx-auto font-semibold text-lg">
-        Top Bar Title
+    <div className=" top-0 left-0 w-full h-[38px] bg-black text-white flex items-center p-3 shadow-md z-50 relative">
+      <div className="mx-auto font-satoshi text-[14px]">
+      Sign up and get 20% off to your first order. <span className='underline cursor-pointer'>Sign Up Now</span> 
       </div>
       <button 
         onClick={handleToggleVisibility} 
-        className="absolute right-3 top-1/2 -translate-y-1/2 hover:bg-blue-600 rounded-full p-1 transition-colors"
+        className="hidden md:block absolute right-3 top-1/2 -translate-y-1/2 hover:bg-white hover:text-black rounded-full p-1 transition-colors"
       >
         <X size={24} />
       </button>
