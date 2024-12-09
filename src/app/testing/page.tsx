@@ -4,13 +4,14 @@ const Testing = () => {
   return (
     <div>
 
-      {/* <p className='font-satoshi'>sharjeel ali bari</p>
-      <p className='font-integ'>sharjeel ali bari  </p> */}
-      <h1 className='font-satoshBold'>satoshi bold</h1>
-      <h1 className='font-satoshi'>satoshi bold</h1>
-      <h1 className='font-integ'>satoshi bold</h1>
-      <h1 className='font-integBold'>satoshi bold</h1>
-      <p>sharjeel ali bair</p>
+     <h2 className='font-integ'>sharjeel ali bari</h2>
+     <h2 className='font-integBold'>sharjeel ali bari</h2>
+     <h2 className='font-integmed'>sharjeel ali bari</h2>
+     <h2 className='font-satoshi'>sharjeel ali bari</h2>
+     <h2 className='font-satoshBold'>sharjeel ali bari</h2>
+     <h2 className='font-satoshmed'>sharjeel ali bari</h2>
+
+
     </div>
   )
 }

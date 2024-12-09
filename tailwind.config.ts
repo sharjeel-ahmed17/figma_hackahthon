@@ -11,6 +11,12 @@ const config: Config = {
   	extend: {
   		colors: {
 			footercolor : '#F0F0F0',
+			herocolor : '#F2F0F1',
+			carddelcolor : '#999999',
+			carddisbg : '#ffeaea',
+			carddisfg : '#ff3333',
+			
+			
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -80,8 +86,10 @@ const config: Config = {
 		  fontFamily : {
 			satoshi : ["var(--satoshi)", "satoshi"],
 			satoshBold : ["var(--satoshi-bold)", "satoshi-bold"],
+			satoshmed : ["var(--satoshi-bold)", "satoshi-med"],
 			integ : ["var(--integ)", "integ"],
 			integBold : ["var(--integ-bold)", "integ-bold"],
+			integmed : ["var(--integ-bold)", "integ-med"],
 		  }
   	}
   },

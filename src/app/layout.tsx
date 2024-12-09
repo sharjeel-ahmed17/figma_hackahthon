@@ -15,6 +15,11 @@ const satoshi = localFont({
   variable: "--satoshi",
   weight: "100 900",
 });
+const satoshimed = localFont({
+  src: "./fonts/Satoshi-Medium.otf",
+  variable: "--satoshi-med",
+  weight: "100 900",
+});
 const satoshiBold = localFont({
   src: "./fonts/Satoshi-Bold.otf",
   variable: "--satoshi-bold",
@@ -25,8 +30,13 @@ const integ = localFont({
   variable: "--integ",
   weight: "100 900",
 });
+const integmed = localFont({
+  src: "./fonts/Fontspring-DEMO-integralcf-medium.otf",
+  variable: "--integ-med",
+  weight: "100 900",
+});
 const integBold = localFont({
-  src: "./fonts/Fontspring-DEMO-integralcf-boldoblique.otf",
+  src: "./fonts/Fontspring-DEMO-integralcf-bold.otf",
   variable: "--integ-bold",
   weight: "100 900",
 });
@@ -49,12 +59,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${integBold.variable} ${satoshiBold.variable} ${geistMono.variable} ${integ.variable} ${satoshi.variable}  antialiased`}
+        className={`${geistSans.variable} ${integBold.variable} ${satoshiBold.variable} ${geistMono.variable} ${integ.variable} ${satoshi.variable}
+        ${satoshimed.variable} ${integmed.variable}  antialiased bg-[#9A9A9A]`}
       >
         <div className="max-w-screen-large mx-auto bg-white">
           <TopBar />
           <Header />
-
           {children}
           <Footer/>
         </div>
