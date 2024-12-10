@@ -1,11 +1,12 @@
 import { Star } from "lucide-react"
+import Heading from "./Heading"
 
 
-const GridProducts = () => {
+const GridProducts = ({title } : {title : string}) => {
   return (
     <section className=" body-font">
     <div className="max-w-[1240px] px-5 py-24 mx-auto">
-        <h2 className='text-center mb-20 font-integBold text-[48px]'>NEW ARRIVALS</h2>
+       <Heading title={title}/>
       <div className="flex flex-wrap -m-4">
        <Card/>
        <Card/>

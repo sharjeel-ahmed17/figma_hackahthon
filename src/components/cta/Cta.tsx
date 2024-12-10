@@ -3,7 +3,7 @@ import React from 'react'
 
 const Cta = () => {
   return (
-    <div className="p-10 bg-black max-w-[1240px] mx-auto h-auto md:h-[180px] z-50 text-white rounded-3xl relative overflow-hidden md:-mb-[90px] -mb-[0px]">
+    <div className="p-10 bg-black max-w-[1240px] mx-auto h-auto md:h-[180px] z-50 text-white rounded-3xl relative overflow-hidden md:-mb-[120px] -mb-[0px]">
     <div className="flex flex-col md:flex-row md:justify-between justify-normal items-center">
       <div className="md:w-1/2 w-full text-center md:text-left">
         <h2 className="font-integBold md:text-[40px] text-[20px] leading-[45px]">
