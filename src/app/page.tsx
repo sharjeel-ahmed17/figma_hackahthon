@@ -1,4 +1,5 @@
 import GridProducts from '@/components/GridProducts'
+import Browse from '@/components/home/bbd/Browse'
 import Gallery from '@/components/home/gallery/Gallery'
 import Hero from '@/components/home/hero/Hero'
 import HeroBottom from '@/components/home/hero/HeroBottom'
@@ -12,9 +13,9 @@ const Home = () => {
    <HeroBottom/>
    <GridProducts/>
    <GridProducts/>
-
+<Browse/>
    <Testimonial/>
-   <Gallery/>
+
    </>
   )
 }

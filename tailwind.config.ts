@@ -13,6 +13,7 @@ const config: Config = {
 			footercolor : '#F0F0F0',
 			herocolor : '#F2F0F1',
 			carddelcolor : '#999999',
+			grey : '#999999',
 			carddisbg : '#ffeaea',
 			carddisfg : '#ff3333',
 			
