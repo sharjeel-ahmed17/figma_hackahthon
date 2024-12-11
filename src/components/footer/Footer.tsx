@@ -2,6 +2,7 @@ import Link from "next/link";
 import { footerData } from "@/data/footerData";
 import { FooterDataType } from "@/types/footer";
 import Cta from "../cta/Cta";
+import Image from "next/image";
 
 const Footer = () => {
   const data: FooterDataType = footerData;
@@ -62,12 +63,14 @@ const Footer = () => {
           </p>
           <div className="flex gap-2 justify-center items-center mt-4 md:mt-0">
             {data.paymentMethods.map((src, index) => (
-              <img
+              <Image
               key={index}
               className="object-cover object-center bg-white p-4 rounded-md w-[60px] h-[40px] sm:w-[80px] sm:h-[50px]"
               
               src={src}
               alt="Payment Method"
+              width={20}
+              height={20}
 
               />
             ))}

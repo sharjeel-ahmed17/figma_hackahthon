@@ -10,14 +10,12 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			footercolor : '#F0F0F0',
-			herocolor : '#F2F0F1',
-			carddelcolor : '#999999',
-			grey : '#999999',
-			carddisbg : '#ffeaea',
-			carddisfg : '#ff3333',
-			
-			
+  			footercolor: '#F0F0F0',
+  			herocolor: '#F2F0F1',
+  			carddelcolor: '#999999',
+  			grey: '#999999',
+  			carddisbg: '#ffeaea',
+  			carddisfg: '#ff3333',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -64,34 +62,63 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		  screens: {
-
-			'small': '390px',
-			'sm': '640px',
-			// => @media (min-width: 640px) { ... }
-	  
-			'md': '768px',
-			// => @media (min-width: 768px) { ... }
-	  
-			'lg': '1024px',
-			// => @media (min-width: 1024px) { ... }
-	  
-			'xl': '1280px',
-			// => @media (min-width: 1280px) { ... }
-	  
-			'2xl': '1536px',
-			'large': '1440px',
-			
-			// => @media (min-width: 1536px) { ... }
-		  },
-		  fontFamily : {
-			satoshi : ["var(--satoshi)", "satoshi"],
-			satoshBold : ["var(--satoshi-bold)", "satoshi-bold"],
-			satoshmed : ["var(--satoshi-bold)", "satoshi-med"],
-			integ : ["var(--integ)", "integ"],
-			integBold : ["var(--integ-bold)", "integ-bold"],
-			integmed : ["var(--integ-bold)", "integ-med"],
-		  }
+  		screens: {
+  			small: '390px',
+  			sm: '640px',
+  			md: '768px',
+  			lg: '1024px',
+  			xl: '1280px',
+  			'2xl': '1536px',
+  			large: '1440px'
+  		},
+  		fontFamily: {
+  			satoshi: [
+  				'var(--satoshi)',
+  				'satoshi'
+  			],
+  			satoshBold: [
+  				'var(--satoshi-bold)',
+  				'satoshi-bold'
+  			],
+  			satoshmed: [
+  				'var(--satoshi-bold)',
+  				'satoshi-med'
+  			],
+  			integ: [
+  				'var(--integ)',
+  				'integ'
+  			],
+  			integBold: [
+  				'var(--integ-bold)',
+  				'integ-bold'
+  			],
+  			integmed: [
+  				'var(--integ-bold)',
+  				'integ-med'
+  			]
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
