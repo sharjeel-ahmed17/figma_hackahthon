@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
-import { Filter } from 'lucide-react'
+import { ChevronDown, Filter } from 'lucide-react'
 import ProductGrid from './product-grid'
 import FilterSidebar from './filter-sidebar'
 
@@ -37,7 +37,16 @@ export default function ProductListingPage() {
 
         {/* Product Grid */}
         <div className="flex-1">
-          <h1 className="text-3xl font-bold mb-6">Products</h1>
+          <div className='flex justify-between items-center px-4'>
+
+          <h1 className="text-3xl font-bold mb-6">Casual</h1>
+   
+<div className='flex'>
+
+          <p>Showing 1-10 of 100 Products Sort by:<span>Most Popular</span> </p>
+          <ChevronDown/>
+</div>
+          </div>
           <ProductGrid />
         </div>
       </div>

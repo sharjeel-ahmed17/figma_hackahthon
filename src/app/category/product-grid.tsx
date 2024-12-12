@@ -7,18 +7,18 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const allProducts = [
-  { id: 1, name: 'Classic T-Shirt', price: 29.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 2, name: 'Slim Fit Jeans', price: 59.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 3, name: 'Running Shoes', price: 89.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 4, name: 'Leather Wallet', price: 39.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 5, name: 'Sunglasses', price: 49.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 6, name: 'Wristwatch', price: 129.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 7, name: 'Hooded Sweatshirt', price: 54.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 8, name: 'Dress Shirt', price: 69.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 9, name: 'Sneakers', price: 79.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 10, name: 'Backpack', price: 44.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 11, name: 'Beanie', price: 19.99, image: '/placeholder.svg?height=300&width=300' },
-  { id: 12, name: 'Scarf', price: 24.99, image: '/placeholder.svg?height=300&width=300' },
+  { id: 1, name: 'Classic T-Shirt', price: 29.99, image: '/images/like2.png' },
+  { id: 2, name: 'Slim Fit Jeans', price: 59.99, image: '/images/like2.png' },
+  { id: 3, name: 'Running Shoes', price: 89.99, image: '/images/like2.png' },
+  { id: 4, name: 'Leather Wallet', price: 39.99, image: '/images/like2.png' },
+  { id: 5, name: 'Sunglasses', price: 49.99, image: '/images/like2.png' },
+  { id: 6, name: 'Wristwatch', price: 129.99, image: '/images/like2.png' },
+  { id: 7, name: 'Hooded Sweatshirt', price: 54.99, image: '/images/like2.png' },
+  { id: 8, name: 'Dress Shirt', price: 69.99, image: '/images/like2.png' },
+  { id: 9, name: 'Sneakers', price: 79.99, image: '/images/like2.png' },
+  { id: 10, name: 'Backpack', price: 44.99, image: '/images/like2.png' },
+  { id: 11, name: 'Beanie', price: 19.99, image: '/images/like2.png' },
+  { id: 12, name: 'Scarf', price: 24.99, image: '/images/like2.png' },
 ]
 
 const ITEMS_PER_PAGE = 6
