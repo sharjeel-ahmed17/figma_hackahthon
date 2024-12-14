@@ -156,8 +156,16 @@ import {
   SlidersVertical,
 } from "lucide-react";
 import React from "react";
+interface FilterSidebarProps {
+  onApply?: () => void
+}
 
-const FilterSidebar = () => {
+const FilterSidebar = ({ onApply }: FilterSidebarProps) => {
+    const handleApply = () => {
+    // Apply filter logic here
+    onApply?.()
+  }
+
   return (
     <div className="max-w-[295px] mx-auto">
       <div className="max-w-[247px] mx-auto">

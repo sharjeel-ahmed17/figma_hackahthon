@@ -56,7 +56,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="py-10">
+      <div className="border border-grey px-2 -mt-10 mb-5"></div>
+      <div className="pb-10">
         <div className="container px-4 mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center">
           <p className="text-gray-500 text-sm text-center sm:text-left">
             {data.copyright}
